@@ -75,6 +75,15 @@ section {
   color: #444;
 }
 
+.bheading {
+  font-size: 2.2rem;
+  color: #444;
+  font-weight: bold;
+}
+.pcourses{
+  font-size: 1.8rem;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -604,16 +613,6 @@ section {
   font-size: 1.2rem;
   color: #0eb582;
 }
-
-/////////////////////////////////////
-.courses_heading {
-  margin-bottom: 3rem;
-  font-size: 3rem;
-  text-transform: capitalize;
-  color: #444;
-
-}
-
 
 .courses .box-container {
   display: -ms-grid;

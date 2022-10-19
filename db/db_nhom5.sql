@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 04:51 AM
+-- Generation Time: Oct 19, 2022 at 06:52 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.0.23
 
@@ -38,6 +38,18 @@ CREATE TABLE `chi_tiet_chuong_trinh` (
   `chi_tiet_created` timestamp NOT NULL DEFAULT current_timestamp(),
   `tk_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chi_tiet_chuong_trinh`
+--
+
+INSERT INTO `chi_tiet_chuong_trinh` (`chi_tiet_id`, `ct_chuong`, `chi_tiet_ten_bai`, `chi_tiet_video_bai`, `chi_tiet_bai_tap`, `chi_tiet_dap_an`, `chi_tiet_ghi_chu`, `chi_tiet_created`, `tk_id`) VALUES
+('L12C1B1', 'L12C1', 'Bài 1: Kĩ Thuật xét tính đơn điệu của hàm số', 'https://www.youtube.com/watch?v=8siMxNiMesI', 'https://drive.google.com/file/d/1NuZ3dm5AWUK2zjoUAHB8gi9Qr0O0k8Te/view', 'https://drive.google.com/file/d/1TbKLnhVAPL34bJinf3tCPIR9tn7It4ZQ/view', NULL, '2022-10-19 09:05:57', 1),
+('L12C1B2', 'L12C1', 'Bài 2: Cực trị hàm số', 'https://drive.google.com/file/d/1TbKLnhVAPL34bJinf3tCPIR9tn7It4ZQ/view', 'https://drive.google.com/file/d/1TbKLnhVAPL34bJinf3tCPIR9tn7It4ZQ/view', 'https://drive.google.com/file/d/1TbKLnhVAPL34bJinf3tCPIR9tn7It4ZQ/view', NULL, '2022-10-19 09:05:57', 1),
+('L12C1B3', 'L12C1', 'Bài 3: Xác định cực trị hàm số', 'https://youtu.be/aIB_4IYP3XM', NULL, NULL, NULL, '2022-10-19 16:39:48', 1),
+('L12C2B1', 'L12C2', 'Bài 1: Lũy thừa và các công thức', 'https://www.youtube.com/watch?v=tqUrjqdCKAk&list=PLjwDqV0cxzXVu-ZYLXMb4Qoh8SiAgXU7Q&index=1&t=24s', 'https://drive.google.com/file/d/1OVFptD53TbgNgwUuREPCo6LjQ2umKCvj/view?usp=sharing', 'https://drive.google.com/file/d/1oIwRnVxNgep101qzRJWFUQLa0YMZRBWF/view?usp=sharing', NULL, '2022-10-19 16:48:37', 1),
+('L12C2B2', 'L12C2', 'Bài 2: Logarit', 'https://youtu.be/0lg2ZxKh2F0', 'https://drive.google.com/file/d/1YxFT5fjJjJa6aZpRvPJ--4A6Lnm2MqSB/view?usp=sharing', 'https://drive.google.com/file/d/1R0CJNW6OabpcKD4v4s71DvpH2Nploqpx/view?usp=sharing', NULL, '2022-10-19 16:48:37', 1),
+('L12C2B3', 'L12C2', 'Bài 3: Đạo hàm hàm số mũ - hàm số logarit ', 'https://www.youtube.com/watch?v=H7alsuY95n8&list=PLjwDqV0cxzXVu-ZYLXMb4Qoh8SiAgXU7Q&index=2', NULL, NULL, NULL, '2022-10-19 16:50:00', 1);
 
 -- --------------------------------------------------------
 
