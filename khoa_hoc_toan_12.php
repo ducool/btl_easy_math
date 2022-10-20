@@ -20,26 +20,7 @@
 <body>
    
 <!-- header section starts  -->
-
-<header class="header">
-
-   <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> educa </a>
-
-   <nav class="navbar">
-      <div id="close-navbar" class="fas fa-times"></div>
-      <a href="home.html">home</a>
-      <a href="about.html">about</a>
-      <a href="courses.html">courses</a>
-      <a href="contact.html">contact</a>
-   </nav>
-
-   <div class="icons">
-      <div id="account-btn" class="fas fa-user"></div>
-      <div id="menu-btn" class="fas fa-bars"></div>
-   </div>
-
-</header>
-
+<?php @include 'header.php'; ?>
 
 
 

@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
 * {
   font-family: 'Nunito', sans-serif;
-  margin: 0;
+   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
   outline: none;
   border: none;
-  text-decoration: none;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -37,7 +38,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 section {
-  padding: 5rem 10%;
+  padding: 3rem 9%;
 }
 
 .heading-link {
@@ -74,7 +75,6 @@ section {
   text-transform: capitalize;
   color: #444;
 }
-
 .bheading {
   font-size: 2.2rem;
   color: #444;
@@ -83,13 +83,12 @@ section {
 .pcourses{
   font-size: 1.8rem;
 }
-
 .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 1.8rem;
-  border: 0.1rem solid #0eb582;
+  border-radius: .5rem solid #0eb582;
   background: #f0fdfa;
   color: #0eb582;
   cursor: pointer;
@@ -110,13 +109,16 @@ section {
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem 10%;
+  padding: 0rem 9%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 1000;
 }
 
@@ -127,41 +129,40 @@ section {
   color: #444;
   font-weight: bolder;
 }
-
 .header .logo i {
   color: #0eb582;
 }
 
-.header .navbar {
-  position: relative;
+.header .navbar ul {
+  list-style: none;
 }
-
-.header .navbar #close-navbar {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 4rem;
-  cursor: pointer;
+.header .navbar ul li {
+  position: relative;
+  float: left;
+}
+.header .navbar ul li:hover ul {
+  display: block;
+}
+.header .navbar ul li a {
+  padding: 2rem;
+  display: block;
+  font-size: 1.7rem;
   color: #444;
+}
+.header .navbar ul li a:hover {
+  color:  #0eb582;
+}
+.header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 20rem;
+  color: #0eb582;
+  background:#fff;
   display: none;
 }
-
-.header .navbar #close-navbar:hover {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.header .navbar ul li ul li {
+  width: 100%;
 }
-
-.header .navbar a {
-  margin-right: 2rem;
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: #444;
-}
-
-.header .navbar a:hover {
-  color: #0eb582;
-}
-
 .header .icons div {
   cursor: pointer;
   font-size: 2.5rem;
@@ -172,9 +173,10 @@ section {
 .header .icons div:hover {
   color: #0eb582;
 }
-
 .header #menu-btn {
   display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
 
 .account-form {
