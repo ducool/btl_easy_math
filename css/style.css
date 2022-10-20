@@ -76,13 +76,15 @@ section {
   color: #444;
 }
 .bheading {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #444;
   font-weight: bold;
 }
 .pcourses{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
+
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -98,6 +100,21 @@ section {
 .btn:hover {
   background: #0eb582;
   color: #fff;
+}
+a:link {
+  color: #444;
+}
+
+a:visited {
+  color: #444;
+}
+
+a:hover {
+  color: #0eb582;
+}
+
+a:active {
+  color: #444;
 }
 
 .header {
