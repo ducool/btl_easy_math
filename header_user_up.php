@@ -33,17 +33,14 @@
             <li><a href="contact.html">Góp ý</a></li>
             <li><a href="#">Tài khoản</a>
                 <ul>
-                    <li><a href="#">Đăng nhập</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
                     <li><a href="#">Đăng ký</a></li>
                 </ul>
             </li>
             
         </ul>
     </nav>
-    <div class="icons">
-     
-      <a href="trang_ca_nhan.php" class="fas fa-user" style="margin: 1.5rem; font-size: 2.5rem;"></a>
-   </div>
+
 </header>
 
 <script src="js/script.js"></script>
