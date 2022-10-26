@@ -16,6 +16,7 @@
    <link rel="stylesheet" href="css/style.css">
 
 </head>
+<body>
 <section class="footer">
 
    <div class="box-container">
@@ -34,10 +35,9 @@
       <div class="box">
          <h3>Thông tin </h3>
          <a href="gioi_thieu.php" class="link">Giới thiệu </a>
-         <a href="https://drive.google.com/drive/folders/1MnHBvjyblDZgrduPAoQqCdlMGquka3N4" class="link">Tài liệu học tập</a>
-         <a href="khoa_hoc_lop_10.php" class="link">Khóa học lớp 10</a>
-         <a href="khoa_hoc_lop_11.php" class="link">Khóa học lớp 11</a>
-         <a href="khoa_hoc_lop_12.php" class="link">Khóa học lớp 12</a>
+         <a href="khoa_hoc_toan_10.php" class="link">Khóa học Toán 10</a>
+         <a href="khoa_hoc_toan_11.php" class="link">Khóa học Toán 11</a>
+         <a href="khoa_hoc_toan_12.php" class="link">Khóa học Toán 12</a>
          <a href="trang_gop_y.php" class="link">Góp ý</a>
       </div>
 
@@ -53,3 +53,5 @@
    <div class="credit">&copy;  <?php echo date('Y'); ?> Bản quyền thuộc về tác giả. Cấm sao chép dưới mọi hình thức</div>
 
 </section>
+</body>
+</html>
