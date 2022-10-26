@@ -1,6 +1,7 @@
 <?php
 
 @include 'config.php';
+session_start();
 
 if(isset($_POST['submit'])){
    $tk_ten_tai_khoan=$_POST['tk_ten_tai_khoan'];
@@ -37,10 +38,11 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/css_dn.css">
 
 </head>
 <body>
+<?php @include 'header.php'; ?>
 
 <?php
 if(isset($message)){
@@ -68,6 +70,6 @@ if(isset($message)){
    </form>
 
 </section>
-
+<?php @include 'footer.php'; ?>
 </body>
 </html>
