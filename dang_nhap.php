@@ -1,5 +1,4 @@
 
-
 <?php
 
   @include 'config.php';
@@ -15,8 +14,6 @@ if(isset($_POST['submit'])){
       
       $row = mysqli_fetch_assoc($sql);
       if($row['tk_loai_tai_khoan'] == 'admin'){
-
-         $_SESSION['admin_name'] = $row['tk_ten_dang_nhap'];
          $_SESSION['admin_email'] = $row['tk_email'];
          $_SESSION['admin_id'] = $row['tk_id'];
          header('location:admin_trang_chu.php');
@@ -24,10 +21,9 @@ if(isset($_POST['submit'])){
 
       }elseif($row['tk_loai_tai_khoan'] == 'user'){
 
-         $_SESSION['user_name'] = $row['tk_ten_dang_nhap'];
          $_SESSION['user_email'] = $row['tk_email'];
          $_SESSION['user_id'] = $row['tk_id'];
-         header('location:trang_chu.php');
+         header('location:trang_ca_nhan.php');
 
        }else{
          $message[] = 'no user found!';
@@ -48,11 +44,11 @@ if(isset($_POST['submit'])){
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/css_dn.css">
 
 </head>
 <body>
-
+<?php @include 'header.php'; ?>
 
 <?php
 if(isset($message)){
@@ -75,9 +71,13 @@ if(isset($message)){
       <input style="border: 1px solid; text-transform: lowercase;" type="tk_email" name="tk_email" class="box" placeholder="Nhập email" required>
       <input style="border: 1px solid; text-transform: lowercase;" type="tk_mat_khau" name="tk_mat_khau" class="box" placeholder="Nhập mật khẩu" required>
       <input style="border: 1px solid;" type="submit" class="btn" name="submit" value="Đăng nhập">
-      <p style="font-size:15px; text-transform: lowercase;">Bạn chưa có tài khoản?<a href="dang_ky.php" style="color: orange">Đăng ký</a></p>
+      <p style="font-size:15px; text-transform: lowercase;">Bạn chưa có tài khoản? <a href="dang_ky.php" style="color: orange">Đăng ký</a></p>
    </form>
 </section>
-
+<?php @include 'footer.php'; ?>
 </body>
+
+
+
+
 </html>
