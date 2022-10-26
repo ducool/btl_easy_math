@@ -1,3 +1,42 @@
+
+<?php
+@include 'config.php';
+session_start();
+if(isset($_SESSION['user_id'])=='')
+{
+    $user_id ='';
+} else {
+    $user_id = $_SESSION['user_id'];
+}
+ 
+
+
+if(isset($_POST['add'])) {
+   $th_id = $_POST['txtkhoahoc'];
+   $tk_id = $_POST['txtid'];
+    $dk="INSERT INTO `tbl_dang_ky_khoa_hoc` (`dk_id`, `th_id`, `tk_id`, `dk_created`) VALUES (NULL, '".$th_id."','".$tk_id."', current_timestamp()) 
+    ";
+    //echo $sql; exit();
+
+    // Thực hiện thêm mới dữ liệu
+    mysqli_query($con, $dk);
+     $message[] = 'Đăng ký thành công';
+}
+
+if(isset($_POST['delete'])) {
+   $th_id = $_POST['txtkhoahoc'];
+   $tk_id = $_POST['txtid'];
+    $dk="DELETE FROM `tbl_dang_ky_khoa_hoc` WHERE tk_id='$tk_id' AND th_id ='$th_id'
+    ";
+
+
+    // Thực hiện thêm mới dữ liệu
+    mysqli_query($con, $dk);
+     $message[] = 'Hủy đăng ký thành công';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,19 +54,55 @@
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/css_dn.css">
 
 
 </head>
 <body>
-   
+   <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
 <!-- header section starts  -->
-<?php @include 'header.php'; ?>
+<?php require 'header.php'; ?>
 <!-- header section ends -->
+
+
 
 <section class="heading-link">
    <h3>Khóa học Toán lớp 12</h3>
-   <p>Thông tin khóa học | Giáo viên | Chương trình</p>
+   <form action="" method="POST">
+   <?php  
+   if($user_id!='') 
+   {
+      $sql2="SELECT * FROM `tbl_dang_ky_khoa_hoc` WHERE tk_id = '$user_id' AND th_id = 'LOP12'";
+      $khoa=mysqli_query($con,$sql2);
+      $data="";
+      if ($kh=mysqli_fetch_array($khoa))
+                {$data = $kh['tk_id']; }
+
+      if($data!='')
+      { ?>
+        
+    <input type="hidden" name="txtkhoahoc" value="LOP12">
+    <input type="hidden" name="txtid" value="<?php echo $user_id ?>">
+   <input type="submit" value=" Hủy đăng ký" name="delete" style="border: 1px solid; font-size: 2rem;" class="btn"> 
+   <?php ;} else { ?>
+    <input type="hidden" name="txtkhoahoc" value="LOP12">
+    <input type="hidden" name="txtid" value="<?php echo $user_id ?>">
+    <input type="submit" value="Đăng ký" name="add" style="border: 1px solid; font-size: 2rem;" class="btn"> 
+    <?php ;} 
+     } else {
+        $data=""; echo "Bạn cần đăng nhập để đăng ký khóa học";} ?>
+      </form>
 </section>
 
 <section class="courses">
@@ -68,11 +143,18 @@
                 <p class="pcourses" style="text-transform: none;"> <?php echo $row["chi_tiet_ten_bai"];?> </p></button></h2>
               <div id="flush-collapse<?php echo $row["chi_tiet_id"];?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?php echo $row["chi_tiet_id"];?>" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
+               
                <ul>
+                <?php if($data==''){ ?>
                  <li style="font-size: 1.5rem;">Video bài giảng</li>
                  <li style="font-size: 1.5rem;">Đề ôn tập</li>
                  <li style="font-size: 1.5rem;">Đáp án</li>
-                 <li style="font-size: 1.5rem; list-style-type: none;"><a href="luu_bai_giang.php">Lưu bài giảng </a> </li>
+            <?php ;} else {?>
+                <li style="font-size: 1.5rem;"><a href=" <?php echo $row["chi_tiet_video_bai"];?>" target="_blank">Video bài giảng</a></li>
+                 <li style="font-size: 1.5rem;"><a href=" <?php echo $row["chi_tiet_bai_tap"];?>" target="_blank">Đề ôn tập</a></li>
+                 <li style="font-size: 1.5rem;"><a href=" <?php echo $row["chi_tiet_dap_an"];?>" target="_blank">Đáp án</a></li>
+                 
+            <?php ;} ?>
                </ul>
               </div>
              </div>
@@ -93,56 +175,11 @@
 
 <!-- footer section starts  -->
 
-<section class="footer">
-
-   <div class="box-container">
-
-      <div class="box">
-         <h3> <i class="fas fa-lightbulb"></i> educa </h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
-         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-         </div>
-      </div>
-
-      <div class="box">
-         <h3>quick links</h3>
-         <a href="home.html" class="link">home</a>
-         <a href="about.html" class="link">about</a>
-         <a href="courses.html" class="link">courses</a>
-         <a href="contact.html" class="link">contact</a>
-      </div>
-
-      <div class="box">
-         <h3>useful links</h3>
-         <a href="#" class="link">help center</a>
-         <a href="#" class="link">ask questions</a>
-         <a href="#" class="link">send feedback</a>
-         <a href="#" class="link">private policy</a>
-         <a href="#" class="link">terms of use</a>
-      </div>
-
-      <div class="box">
-         <h3>newsletter</h3>
-         <p>subscribe for latest upadates</p>
-         <form action="">
-            <input type="email" name="" placeholder="enter your email" id="" class="email">
-            <input type="submit" value="subscribe" class="btn">
-         </form>
-      </div>
-
-   </div>
-
-   <div class="credit"> created by <span>mr. web designer</span> | all rights reserved! </div>
-
-</section>
 
 
 
 
+<?php @include 'footer.php'; ?>
 
 
 
