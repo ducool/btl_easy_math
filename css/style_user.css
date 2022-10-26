@@ -245,14 +245,14 @@ section{
    cursor: pointer;
    width: 4.5rem;
    line-height: 4.4rem;
-   background-color: var(--light-bg);
+   background-color: var(--black);
    text-align: center;
    margin-left: .5rem;
 }
 
 .header .flex .icons div:hover{
    background-color: var(--black);
-   color:var(--white);
+   color:var(--main-color);
 }
 
 #search-btn{
