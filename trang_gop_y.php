@@ -1,9 +1,13 @@
-
 <?php
-
 @include 'config.php';
-
 session_start();
+if(isset($_SESSION['user_id'])=='')
+{
+    $user_id ='';
+} else {
+    $user_id = $_SESSION['user_id'];
+} 
+
 
 if(isset($_POST['send'])){
 
@@ -41,7 +45,7 @@ if(isset($_POST['send'])){
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/css_dn.css">
 
 </head>
 <body>

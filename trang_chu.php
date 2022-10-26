@@ -1,3 +1,13 @@
+<?php
+@include 'config.php';
+session_start();
+if(isset($_SESSION['user_id'])=='')
+{
+    $user_id ='';
+} else {
+    $user_id = $_SESSION['user_id'];
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +23,7 @@
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/na.css">
+   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
