@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <?php
-    require("header2.php");
+    require("header.php");
 ;?>
 <body id="tin_tuc" >
     <!-- Page Preloder -->
@@ -12,14 +12,16 @@
 
     <!-- Header Section Begin -->
 <section class="heading-link">
-   <h3>Khóa học Toán lớp 10</h3>
-   <p>Thông tin khóa học | Giáo viên | Chương trình</p>
+   <h3>Khóa học Toán </h3>
+   <p><form class="search-form" enctype="application/x-www-form-urlencoded"  method="get" action="tim_kiem.php" name="frm_search">           
+                <input id="search-quick" type="text"   name="tk" placeholder="Tìm kiếm" autocomplete="off" minlength="1" style="">
+                <button class="submit"><i class="fa fa-search"></i></button></p>
+
 </section>
 
 <section class="courses">
-
-   <h2 class="bheading"> Thông tin khóa học </h2>
-   <p class="pcourses">chi tiết khóa học</p>
+    <h2 class="bheading"> Thông tin khóa học </h2>
+   <p class="pcourses">chi tiết kh</p>
    <br>
    
    <h2 class="bheading"> Giáo viên </h2>
@@ -27,6 +29,8 @@
    <br>
 
    <h2 class="bheading"> Chương trình </h2>
+
+   
 <?php 
       // Kết nối đến CSDL
       require('config.php');
