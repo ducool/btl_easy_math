@@ -61,7 +61,7 @@ if(isset($message)){
 
    <form action="" method="post"style="border: 1px solid;">
       <h3>Đăng ký</h3>
-      <input style="border: 1px solid; text-transform: lowercase;"type="text" name="tk_ten_tai_khoan" class="box" placeholder="Nhập tên đăng nhập" required>
+      <input style="border: 1px solid; text-transform: lowercase;"type="text" name="tk_ten_tai_khoan" class="box" placeholder="Nhập họ và tên" required>
       <input style="border: 1px solid; text-transform: lowercase;" type="email" name="tk_email" class="box" placeholder="Nhập email" required>
       <input style="border: 1px solid; text-transform: lowercase;" type="password" name="tk_mat_khau" class="box" placeholder="Nhập mật khẩu" required>
       <input style="border: 1px solid; text-transform: lowercase;" type="password" name="ctk_mat_khau" class="box" placeholder="Nhập lại mật khẩu" required>
