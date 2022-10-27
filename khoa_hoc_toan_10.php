@@ -74,17 +74,19 @@ if(isset($message)){
 <?php require 'header.php'; ?>
 <!-- header section ends -->
 
+
+
 <section class="heading-link">
    <h3>Khóa học Toán lớp 10</h3>
    <form action="" method="POST">
    <?php  
    if($user_id!='') 
    {
-      $sql2="SELECT * FROM `tbl_dang_ky_khoa_hoc` WHERE tk_id = '$user_id' AND th_id = 'LOP11'";
+      $sql2="SELECT * FROM `tbl_dang_ky_khoa_hoc` WHERE tk_id = '$user_id' AND th_id = 'LOP10'";
       $khoa=mysqli_query($con,$sql2);
       $data="";
       if ($kh=mysqli_fetch_array($khoa))
-                { $data = $kh['tk_id']; }
+                {$data = $kh['tk_id']; }
 
       if($data!='')
       { ?>
@@ -98,13 +100,12 @@ if(isset($message)){
     <input type="submit" value="Đăng ký" name="add" style="border: 1px solid; font-size: 2rem;" class="btn"> 
     <?php ;} 
      } else {
-        $data=""; echo "Bạn cần đăng nhập để đăng ký khóa học";} ?>
+        $data=""; ?>  <p class="pcourses">Bạn cần đăng nhập để đăng ký khóa học</p> 
+        <?php ;} ?>
       </form>
-      
 </section>
 
 <section class="courses">
-
    <h2 class="bheading"> Thông tin khóa học </h2>
    <?php 
    $sql3= "SELECT * FROM `tbl_tong_hop_khoa_hoc` WHERE th_id LIKE'LOP10'";
@@ -116,14 +117,13 @@ if(isset($message)){
    <br>
    
    <h2 class="bheading"> Giáo viên </h2>
-    <?php 
+   <?php 
    $sql4= "SELECT * FROM `tbl_giao_vien` WHERE th_id LIKE'LOP10'";
    $giaovien=mysqli_query($con,$sql4);
    while($tt=mysqli_fetch_array($giaovien))
    { ?>
       <p class="pcourses"> <?php echo $tt["gv_ho_ten"];?> <br>  <?php echo $tt["gv_thong_tin"];?></p>
   <?php } ?>
-   
    <br>
 
    <h2 class="bheading"> Chương trình </h2>
@@ -175,6 +175,15 @@ if(isset($message)){
   
     </div>
 </section>
+
+
+
+
+
+
+
+
+
 <!-- footer section starts  -->
 
 
@@ -194,6 +203,3 @@ if(isset($message)){
 
 </body>
 </html>
-
-
-
