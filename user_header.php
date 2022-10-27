@@ -28,7 +28,7 @@ $user_id = $_SESSION['user_id'];
          <?php ;} ?>
          <h3><?= $tk['tk_ten_tai_khoan']; ?></h3>
          <span>Học sinh</span>
-         <a href="trang_ca_nhan.php" class="btn">view profile</a>
+         <a href="cap_nhat_ho_so.php" class="btn">Hồ sơ</a>
          <?php
            /* }else{
          ?>
@@ -43,8 +43,8 @@ $user_id = $_SESSION['user_id'];
       </div>
 
    <nav class="navbar">
-      <a href="#"><i class="fas fa-user"></i><span>Trang cá nhân</span></a>
-      <a href="#"><i class="fas fa-book"></i><span>Khóa học đã đăng ký</span></a>
+      <a href="trang_ca_nhan.php"><i class="fas fa-user"></i><span>Trang cá nhân</span></a>
+      <a href="trang_ca_nhan.php"><i class="fas fa-book"></i><span>Khóa học đã đăng ký</span></a>
       
       
    </nav>
