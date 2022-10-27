@@ -21,11 +21,11 @@
 
 <section class="courses">
     <h2 class="bheading"> Thông tin khóa học </h2>
-   <p class="pcourses">chi tiết kh</p>
+  
    <br>
    
    <h2 class="bheading"> Giáo viên </h2>
-   <p class="pcourses">chi tiết </p>
+  
    <br>
 
    <h2 class="bheading"> Chương trình </h2>
@@ -39,12 +39,13 @@
 
      <?php 
      $tk=$_GET['tk'];
-     $sql1="SELECT * FROM `tbl_chuong_trinh` WHERE ct_ten_chuong like  '%$tk%'";
+     $sql1="SELECT * FROM `chi_tiet_chuong_trinh` WHERE chi_tiet_ten_bai like'%$tk%'";
+
      $chuong_trinh=mysqli_query($con,$sql1);
      while ($chuong=mysqli_fetch_array($chuong_trinh))
      {  ;?>
    
-   <p class="pcourses" style="font-weight:bold; text-transform: uppercase;"> <?php echo $chuong["ct_ten_chuong"];?> </p> 
+   <p class="pcourses" style="font-weight:bold; text-transform: uppercase;"> <?php echo $chuong["ct_chuong"];?> </p> 
     <?php $sql="SELECT * FROM `chi_tiet_chuong_trinh` WHERE ct_chuong ='".$chuong["ct_chuong"]."'";
 
       $chi_tiet=mysqli_query($con,$sql);
@@ -127,6 +128,11 @@
    <div class="credit"> created by <span>mr. web designer</span> | all rights reserved! </div>
 
 </section>
+</form>
+</p>
+</section>
+</body>
+</html>
 
 
 
