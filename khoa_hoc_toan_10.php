@@ -100,9 +100,7 @@ if(isset($message)){
      } else {
         $data=""; echo "Bạn cần đăng nhập để đăng ký khóa học";} ?>
       </form>
-      <form class="search-form" enctype="application/x-www-form-urlencoded"  method="get" action="tim_kiem.php" name="frm_search">           
-                <input id="search-quick" type="text"   name="tk" placeholder="Tìm kiếm" autocomplete="off" minlength="1" style="">
-                <button class="submit"><i class="fa fa-search"></i></button>
+      
 </section>
 
 <section class="courses">
