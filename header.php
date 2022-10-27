@@ -13,26 +13,24 @@
 </head>
 <body>
 <header class="header">
-    <a href="#" class="logo"> <i class="fas fa-lightbulb"></i> Easymath </a>
+    <a href="trang_chu.php" class="logo"> <i class="fas fa-lightbulb"></i> Easymath </a>
     <div id="menu-btn" class="fas fa-bars"></div>
     <nav class="navbar">
         <ul>
             <li><a href="trang_chu.php">Trang chủ</a></li>
-            <li><a href="#">Khóa học</a>
+            <li><a href="">Khóa học</a>
                 <ul>
-                    <li><a href="khoa_hoc_lop_10.php">Toán 10</a></li>
-                    <li><a href="khoa_hoc_lop_11.php">Toán 11</a></li>
+                    <li><a href="khoa_hoc_toan_10.php">Toán 10</a></li>
+                    <li><a href="khoa_hoc_toan_11.php">Toán 11</a></li>
                     <li><a href="khoa_hoc_toan_12.php">Toán 12</a></li>
                 </ul>
             </li>
             <li><a href="trang_gop_y.php">Góp ý</a></li>
-            <li><a href="#">Tài khoản</a>
+            <li><a href="">Tài khoản</a>
                 <ul>
                     <li> <?php @include 'config.php';
 
-                     //session_start();
-
-                     //$user_id = $_SESSION['user_id'];
+            
 
                      if($user_id ==''){ ?>
                         <a href="dang_nhap.php">Đăng nhập</a>

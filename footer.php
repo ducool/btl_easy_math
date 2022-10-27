@@ -25,16 +25,16 @@
          <h3> <i class="fas fa-lightbulb"></i> Easymath</h3>
          <p>Website học toán online miễn phí dành cho các khối 10, 11, 12 </p>
          <div class="share">
-            <a href="https://www.facebook.com/profile.php?id=100043800724081" class="fab fa-facebook-f"></a>
-            <a href="https://www.youtube.com/channel/UCSoASXyNCHHrKe1lcegA4Cw" class="fab fa-youtube"></a>
-            <a href="https://www.instagram.com/doanthat91/" class="fab fa-instagram"></a>
-            <a href="https://www.tiktok.com/@thaythattoan?" class="fab fa-tiktok"></a>
+            <a href="trang_chu.php" class="fab fa-facebook-f"></a>
+            <a href="trang_chu.php" class="fab fa-youtube"></a>
+            <a href="trang_chu.php" class="fab fa-instagram"></a>
+            <a href="trang_chu.php" class="fab fa-tiktok"></a>
          </div>
       </div>
 
       <div class="box">
          <h3>Thông tin </h3>
-         <a href="gioi_thieu.php" class="link">Giới thiệu </a>
+         <a href="trang_chu.php" class="link">Giới thiệu </a>
          <a href="khoa_hoc_toan_10.php" class="link">Khóa học Toán 10</a>
          <a href="khoa_hoc_toan_11.php" class="link">Khóa học Toán 11</a>
          <a href="khoa_hoc_toan_12.php" class="link">Khóa học Toán 12</a>
@@ -45,12 +45,12 @@
             <h3>Liên hệ</h3>
             <p> <i class="fas fa-phone"></i> Hotline: 18002126 </p>
             <p> <i class="fas fa-envelope"></i> Email: easymath@gmail.com </p>
-            <p> <i class="fas fa-map-marker-alt"></i> Trụ sở: Học viện Ngân hàng, số 12 Chùa Bộc, Đống Đa, Hà nội</p>
+            <p> <i class="fas fa-map-marker-alt"></i> Trụ sở: Học viện Ngân hàng, số 12 Chùa Bộc, Đống Đa, Hà Nội</p>
         </div>
 
    </div>
 
-   <div class="credit">&copy;  <?php echo date('Y'); ?> Bản quyền thuộc về tác giả. Cấm sao chép dưới mọi hình thức</div>
+   <div class="credit">&copy;  <?php echo date('Y'); ?> Thực hiện bởi Nhóm 5 </div>
 
 </section>
 </body>
